@@ -1,7 +1,7 @@
 <nav class="p-4 bg-slate-600 text-slate-300 flex justify-between">
   <div class="flex gap-8">
-    <a *ngIf="isLogin" [routerLink]="['anime','list']"><button>Anime</button></a>
-    <a *ngIf="isLogin" [routerLink]="['manga','list']"><button>Manga</button></a>
+    <a [routerLink]="['anime','list']"><button>Anime</button></a>
+    <a [routerLink]="['manga','list']"><button>Manga</button></a>
   </div>
   <a [routerLink]="['login']"><button>Login</button></a>
 </nav>
