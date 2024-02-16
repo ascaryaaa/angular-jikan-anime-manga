@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoutingModule } from './routing.module';
 import { AnimeListComponent } from './anime-list/anime-list.component';
-import { AnimeService } from './anime.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AnimeDetailComponent } from './anime-detail/anime-detail.component';
 
 
 
 @NgModule({
   declarations: [
-    AnimeListComponent
+    AnimeListComponent,
+    AnimeDetailComponent
   ],
   imports: [
     CommonModule,
