@@ -17,6 +17,6 @@ export class AnimeService {
         observer.next(respone.data);
         observer.complete();
       })
-    })
+   })
   }
 }

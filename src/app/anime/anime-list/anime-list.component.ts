@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Anime } from '../anime';
+import { AnimeService } from '../anime.service';
 
 @Component({
   selector: 'app-anime-list',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './anime-list.component.css'
 })
 export class AnimeListComponent {
+  animes$: Observable<Array<Anime>>;
 
+  constructor(private service: AnimeService) {
+    this.animes$ = this.service.getTopAnimeList();
+  }
 }
