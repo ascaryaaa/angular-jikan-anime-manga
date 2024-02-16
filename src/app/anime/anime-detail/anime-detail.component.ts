@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AnimeService } from '../anime.service';
+import { Anime } from '../anime';
 
 @Component({
   selector: 'app-anime-detail',
@@ -6,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './anime-detail.component.css'
 })
 export class AnimeDetailComponent {
-  
+  anime$: Observable<Anime>;
+  constructor(private router: ActivatedRoute, private service: AnimeService) {
+    const id: number = this.router.snapshot.data['id'];
+    this.anime$ = this.service.getAnimeDetail(id);
+  }
 }
