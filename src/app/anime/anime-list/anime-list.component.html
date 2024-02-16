@@ -5,6 +5,6 @@
 <div *ngIf="animes$ | async else loading">
     <div *ngFor="let anime of (animes$ | async)">
         {{ anime.title}}
-        <img [src]="anime.images.webp.small_image_url">
+        <img [src]="anime.images.webp.large_image_url">
     </div>
 </div>
