@@ -7,7 +7,7 @@ export const routes: Routes = [
         import('./anime/anime.module').then(m => m.AnimeModule)    
     },
     {
-        path: 'amnga',
+        path: 'manga',
         loadChildren: ()=> 
         import('./manga/manga.module').then(m => m.MangaModule)    
     }
