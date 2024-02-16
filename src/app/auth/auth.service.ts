@@ -23,7 +23,17 @@ export class AuthService {
     } else {
       this.user = response;
       // alert('Hello, ' + this.user.name + '!')
+      localStorage.setItem('user', JSON.stringify(response))
       this.router.navigate(['anime'])
+    }
+  }
+
+  getAuth(): User | undefined {
+    const respone = localStorage.getItem('user')
+    if (!respone) {
+      return undefined;
+    } else {
+      return JSON.parse(respone);
     }
   }
 
