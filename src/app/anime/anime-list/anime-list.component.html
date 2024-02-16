@@ -1,2 +1,4 @@
 <p>anime-list works!</p>
-<div>{{ animes$ | async}}</div>
+<div *ngFor="let anime of (animes$ | async)">
+    {{ anime.title}}
+</div>
