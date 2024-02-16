@@ -15,9 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     RoutingModule,
     HttpClientModule,
-  ],
-  providers: [
-    AnimeService
   ]
 })
 export class AnimeModule { }
