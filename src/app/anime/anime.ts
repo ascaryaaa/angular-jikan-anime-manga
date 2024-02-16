@@ -8,6 +8,7 @@ export interface Anime {
             large_image_url: string
         }
     }
+    synopsis: string
 }
 
 export interface GetAnimeResponse {
