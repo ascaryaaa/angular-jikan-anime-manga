@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,5 +10,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  onSubmit(form:NgForm) {
+    //alert(form.value?.username);
+    if(!form.valid){
+      alert("please complete the form!");
+      return;
+    }
+    alert('login success');
+  }
 
 }
