@@ -12,7 +12,7 @@ import { Anime } from '../anime';
 export class AnimeDetailComponent {
   anime$: Observable<Anime>;
   constructor(private router: ActivatedRoute, private service: AnimeService) {
-    const id: number = this.router.snapshot.data['id'];
+    const id: number = this.router.snapshot.params['id'];
     this.anime$ = this.service.getAnimeDetail(id);
   }
 }

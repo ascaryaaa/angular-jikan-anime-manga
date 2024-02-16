@@ -1,2 +1,10 @@
-<p>anime-detail works!</p>
-{{anime$ | async}}
+<div *ngIf="anime$ | async as anime" class="p-8">
+    <div class="flex">
+        <div>
+            <img [src]="anime.images.webp.large_image_url">
+        </div>
+        <div>
+            <h3 class="p-10">{{ anime.title }}</h3>
+        </div>
+    </div>
+</div>
