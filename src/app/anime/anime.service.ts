@@ -13,7 +13,10 @@ export class AnimeService {
 
   getTopAnimeList(): Observable<Array<Anime>> {
     return new Observable(observer => {
-      this.httpClient.get<GetAnimeResponse>(topAnimeListEndpoint).subscribe(respone => {
+      this.httpClient
+      .get<GetAnimeResponse>(topAnimeListEndpoint)
+      .subscribe(respone => {
+        console.log({respone});
         observer.next(respone.data);
         observer.complete();
       })
