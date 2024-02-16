@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User, UserForm } from './auth';
 import { Observable } from 'rxjs';
+import { Route, Router } from '@angular/router';
 
 const users: Array<User> = [
   { username: 'admin', password: '123', name: 'admin'},
@@ -12,7 +13,7 @@ const users: Array<User> = [
 })
 export class AuthService {
   user: User | undefined;
-  constructor() { }
+  constructor(private router: Router) { }
 
   login(form: UserForm) {
     const response =users.find(user => this.matchUser(user, form))
@@ -21,7 +22,8 @@ export class AuthService {
       alert('User is not found!');
     } else {
       this.user = response;
-      alert('Hello, ' + this.user.name + '!')
+      // alert('Hello, ' + this.user.name + '!')
+      this.router.navigate(['anime'])
     }
   }
 
