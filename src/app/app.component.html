@@ -1,7 +1,5 @@
-<div class="text-rose-600">test</div>
-
-<nav class="p-2">
-  <a><button>Anime</button></a>
-  <a><button>Anime</button></a>
+<nav class="p-4 bg-slate-600 text-slate-300 flex gap-8">
+  <a [routerLink]="['anime']"><button>Anime</button></a>
+  <a [routerLink]="['manga']"><button>Manga</button></a>
 </nav>
 <router-outlet />
