@@ -1,12 +1,11 @@
-<p>anime-list works!</p>
 <ng-template #loading>
-    Loading
+    Loading..
 </ng-template>
-<div *ngIf="animes$ | async else loading" class="flex gap-4 flex-wrap">
-    <div *ngFor="let anime of (animes$ | async)" class="w-20">
-        <a [routerLink]="[anime.mal_id.toString()]">
-            {{ anime.title}}
-            <img [src]="anime.images.webp.large_image_url">
+<div *ngIf="animes$ | async as animes else loading" class="flex gap-4 flex-wrap justify-center">
+    <div *ngFor="let anime of animes" class="w-40">
+        <a [routerLink]="['../', anime.mal_id.toString()]">
+            <img [src]="anime.images.webp.large_image_url" class="h-60">
+            {{anime.title}}
         </a>
     </div>
 </div>

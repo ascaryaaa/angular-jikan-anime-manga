@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './anime-detail.component.css'
 })
 export class AnimeDetailComponent {
-
+  
 }

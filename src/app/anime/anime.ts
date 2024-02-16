@@ -17,3 +17,7 @@ export interface GetAnimeResponse {
         has_next_page: boolean
     }
 }
+
+export interface GetAnimeDetailResponse {
+    data: Anime
+}

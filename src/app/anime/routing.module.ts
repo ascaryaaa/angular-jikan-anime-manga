@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'list',
     component: AnimeListComponent
   },
-  { path: 'id', component: AnimeDetailComponent }
+  { path: ':id', component: AnimeDetailComponent }
 ];
 
 @NgModule({
