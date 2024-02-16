@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {
@@ -10,5 +11,9 @@ export const routes: Routes = [
         path: 'manga',
         loadChildren: ()=> 
         import('./manga/manga.module').then(m => m.MangaModule)    
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
     }
 ];
