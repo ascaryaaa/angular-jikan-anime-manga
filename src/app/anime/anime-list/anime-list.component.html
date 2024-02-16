@@ -1,5 +1,10 @@
 <p>anime-list works!</p>
-<div *ngFor="let anime of (animes$ | async)">
-    {{ anime.title}}
-    <img [src]="anime.images.webp.small_image_url">
+<ng-template #loading>
+    Loading
+</ng-template>
+<div *ngIf="animes$ | async else loading">
+    <div *ngFor="let anime of (animes$ | async)">
+        {{ anime.title}}
+        <img [src]="anime.images.webp.small_image_url">
+    </div>
 </div>
