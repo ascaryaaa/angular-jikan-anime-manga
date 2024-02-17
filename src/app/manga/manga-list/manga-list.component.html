@@ -1,1 +1,11 @@
-<p>manga-list works!</p>
+<ng-template #loading>
+    Loading..
+</ng-template>
+<div *ngIf="mangas$ | async as mangas else loading" class="flex gap-4 flex-wrap justify-center">
+    <div *ngFor="let manga of mangas" class="w-40">
+        <a [routerLink]="['../', manga.mal_id.toString()]">
+            <img [src]="manga.images.webp.large_image_url" class="h-60">
+            {{manga.title}}
+        </a>
+    </div>
+</div>
