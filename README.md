@@ -1,6 +1,15 @@
 # AngularJikanAnimeManga
 
+## Description
 This repository contains a simple Angular project that utilizes the Jikan API to fetch and display information about top anime and manga. Users can browse through a list of top anime/manga, click on individual items to view detailed information such as synopsis, image, and title. Additionally, the project includes user authentication functionality allowing users to log in.
+
+![image](https://github.com/ascaryaaa/angular-jikan-anime-manga/assets/73589875/e81fcffc-9349-4417-a925-fa283c106317)
+
+
+## Login
+If you open the project, you need to login first before accessing, you can login using:
+Username: Admin
+Password: 123
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
