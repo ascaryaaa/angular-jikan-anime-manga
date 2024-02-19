@@ -1,11 +1,11 @@
 <ng-template #loading>
     Loading..
 </ng-template>
-<div *ngIf="animes$ | async as animes else loading" class="flex gap-4 flex-wrap justify-center">
+<div *ngIf="animes$ | async as animes else loading" class="pt-8 flex gap-4 flex-wrap justify-evenly">
     <div *ngFor="let anime of animes" class="w-40">
         <a [routerLink]="['../', anime.mal_id.toString()]">
             <img [src]="anime.images.webp.large_image_url" class="h-60">
             {{anime.title}}
         </a>
     </div>
-</div>
+</div>  
